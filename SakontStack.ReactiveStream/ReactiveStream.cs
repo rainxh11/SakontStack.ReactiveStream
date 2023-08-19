@@ -15,16 +15,16 @@ namespace SakontStack.ReactiveStream;
 
 public class ReactiveStream : Stream, IObservable<StreamProgress>
 {
-    private readonly Stream _stream;
-    private readonly IProgress<StreamProgress>? _progress;
-    private readonly long? _totalLength;
-    private readonly IObservable<StreamProgress> _observable;
-    private readonly StreamOptions _options = new();
-    private event EventHandler<StreamProgress>? OnProgress;
-    private ConcurrentBag<TimestampedDelta> _deltas = new();
+    private readonly Stream                          _stream;
+    private readonly IProgress<StreamProgress>?      _progress;
+    private readonly long?                           _totalLength;
+    private readonly IObservable<StreamProgress>     _observable;
+    private readonly StreamOptions                   _options = new();
+    private event EventHandler<StreamProgress>?      OnProgress;
+    private readonly ConcurrentBag<TimestampedDelta> _deltas = new();
 
-    private SemaphoreSlim _readLock  = new(1, 1);
-    private SemaphoreSlim _writeLock = new(1, 1);
+    private readonly SemaphoreSlim _readLock  = new(1, 1);
+    private readonly SemaphoreSlim _writeLock = new(1, 1);
 
     public class StreamOptions
     {
