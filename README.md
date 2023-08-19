@@ -108,6 +108,19 @@ await response.Content.CopyToAsync(stream);
 stream.ModifyOptions(x => x.WriteSpeedLimit = null);
 ```
 
+**[`ByteSizeLib`](https://www.nuget.org/packages/ByteSize) library is not a dependency, and only used in this example to provide sample codes that will print progress with better formatted byte sizes**
+
+_example output:_
+
+```powershell
+...
+Downloaded 4.7 MiB/4.69 GiB (0.10%) 680 KiB/sec
+Downloaded 5.03 MiB/4.69 GiB (0.10%) 1016 KiB/sec
+Downloaded 5.04 MiB/4.69 GiB (0.10%) 1 MiB/sec
+Downloaded 5.36 MiB/4.69 GiB (0.11%) 328 KiB/sec
+Downloaded 5.7 MiB/4.69 GiB (0.12%) 680 KiB/sec
+```
+
 ## API:
 
 the `ReactiveStream` class implements both `Stream` & `IObservable<ReactiveStream.StreamProgress>`
