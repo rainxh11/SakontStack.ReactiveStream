@@ -42,12 +42,13 @@ public class ReactiveStream : Stream, IObservable<StreamProgress>
 
     public class StreamProgress
     {
-        public ProgressType Type { get; init; }
-        public long? TotalBytes { get; init; }
-        public long Bytes { get; init; }
-        public long Delta { get; init; }
-        public long BytesPerSecond { get; init; }
-        public long? SpeedLimit { get; init; }
+        public ProgressType   Type           { get; init; }
+        public long?          TotalBytes     { get; init; }
+        public long           Bytes          { get; init; }
+        public long           Delta          { get; init; }
+        public long           BytesPerSecond { get; init; }
+        public long?          SpeedLimit     { get; init; }
+        public DateTimeOffset Timestamp      { get; private set; } = DateTimeOffset.Now;
 
         public double Percentage => TotalBytes is null or 0
                                         ? double.NegativeInfinity
