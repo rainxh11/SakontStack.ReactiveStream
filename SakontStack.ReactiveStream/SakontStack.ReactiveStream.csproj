@@ -2,15 +2,15 @@
 
   <PropertyGroup>
     <TargetFrameworks>net6.0</TargetFrameworks>
-	  <Version>1.0</Version>
+	  <Version>1.0.1</Version>
 	  <LangVersion>10</LangVersion>
 	  <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
 	  <Title>Reactive Stream</Title>
-	  <Description>a Stream wrapper that provides read / write progress reporting through IProgress&lt;StreamProgress&gt; and an IObservable&lt;StreamProgress&gt;</Description>
+	  <Description>a Stream wrapper that provides speed throttling, read / write progress reporting through IProgress&lt;StreamProgress&gt; and an IObservable&lt;StreamProgress&gt;</Description>
 	  <RepositoryType>git</RepositoryType>
-	  <PackageTags>reactive;stream;progress;wrapper</PackageTags>
-	  <AssemblyVersion>1.0</AssemblyVersion>
-	  <FileVersion>1.0</FileVersion>
+	  <PackageTags>reactive;stream;progress;wrapper;throtlle;limit</PackageTags>
+	  <AssemblyVersion>1.0.1</AssemblyVersion>
+	  <FileVersion>1.0.1</FileVersion>
 	  <IncludeSymbols>False</IncludeSymbols>
 	  <RepositoryUrl>https://github.com/rainxh11/SakontStack.ReactiveStream</RepositoryUrl>
 	  <PackageLicenseFile>LICENSE.txt</PackageLicenseFile>
